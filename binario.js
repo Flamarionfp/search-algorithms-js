@@ -2,7 +2,7 @@ const numbers = [1, 3, 5, 8, 11, 12, 15, 20, 21, 24, 27, 45, 67, 76, 77, 98];
 
 function searchNumber(numberToSearch) {
   let indexOfMiddle = numbers.length / 2;
-  let middleNumber = numbers[indexOfMiddle];
+  let middleNumber = numbers[indexOfMiddle - 1];
   if (middleNumber === numberToSearch) {
     return { found: true, index: indexOfMiddle, loops: 0 };
   } else {
@@ -25,7 +25,7 @@ function searchNumber(numberToSearch) {
   return { found: false };
 }
 
-const numberToSearch = 45;
+const numberToSearch = 57;
 const { found, index, loops } = searchNumber(numberToSearch);
 if (found) {
   console.log(
